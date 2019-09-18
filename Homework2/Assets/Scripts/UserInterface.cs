@@ -3,12 +3,12 @@ using System.Collections;
 using Com.MyGame;
  
 public class UserInterface : MonoBehaviour {
-    IUserActions myActions;
+    IUserActions actions;
     float btnWidth = (float)Screen.width / 8.0f;
     float btnHeight = (float)Screen.height / 8.0f;
  
     void Start () {
-        myActions = mainSceneController.getInstance() as IUserActions;
+        actions = mainSceneController.getInstance() as IUserActions;
     }
 	
 	void Update () {
@@ -17,19 +17,19 @@ public class UserInterface : MonoBehaviour {
  
     void OnGUI() {
         if (GUI.Button(new Rect(100, 350, btnWidth, btnHeight), "Priests GetOn")) {
-            myActions.priestsGetOn();
+            actions.priestsGetOn();
         }
         if (GUI.Button(new Rect(225, 350, btnWidth, btnHeight), "Priests GetOff")) {
-            myActions.priestsGetOff();
+            actions.priestsGetOff();
         }
         if (GUI.Button(new Rect(375, 350, btnWidth, btnHeight), "Go!")) {
-            myActions.boatMove();
+            actions.boatMove();
         }
         if (GUI.Button(new Rect(525, 350, btnWidth, btnHeight), "Devils GetOn")) {
-            myActions.devilsGetOn();
+            actions.devilsGetOn();
         }
         if (GUI.Button(new Rect(675, 350, btnWidth, btnHeight), "Devils GetOff")) {
-            myActions.devilsGetOff();
+            actions.devilsGetOff();
         }
  
     }

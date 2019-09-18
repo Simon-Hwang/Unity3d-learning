@@ -30,7 +30,6 @@ public class BoatBehaviour : MonoBehaviour {
             }
         }
     }
-    //检测靠岸
     private bool isMovingToEdge() {
         if (moveDir.x < 0 && this.transform.position.x <= LOCATION_SET.boat_left_LOC.x) {  //向左，已到
             gameJudge.judgeTheGame(DIRECTION.Left);
@@ -46,15 +45,11 @@ public class BoatBehaviour : MonoBehaviour {
             moveDir = new Vector3(-moveDir.x, 0, 0);
             return true;
         }
-        else {  //还没靠岸
+        else { 
             return false;
         }
     }
  
-    /**
-    * 提供给GenGameObjects脚本调用
-    * 点击Go按钮触发船移动：需要船静止 + 船上有人（至少一个位置不空）
-    **/
     public void setBoatMove() {
         if (!isMoving && (!leftPosEmpty || !rightPosEmpty)) {
             isMoving = true;

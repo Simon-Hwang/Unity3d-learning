@@ -65,7 +65,6 @@ public class GenGameObjects : MonoBehaviour {
         myBoatBehaviour.setBoatMove();
     }
  
-    //牧师上船
     public void priestsGetOn() {
         if (myBoatBehaviour.isMoving)
             return;
@@ -87,7 +86,6 @@ public class GenGameObjects : MonoBehaviour {
             }
         }
     }
-    //恶魔上船
     public void devilsGetOn() {
         if (myBoatBehaviour.isMoving)
             return;

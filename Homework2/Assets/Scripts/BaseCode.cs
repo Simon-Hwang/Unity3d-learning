@@ -60,10 +60,6 @@ namespace Com.MyGame {
             }
         }
  
- 
-        /**
-        * 实现IUserActions接口
-        **/
         public void boatMove() {
             myGenGameObjects.boatMove();
         }
@@ -84,9 +80,6 @@ namespace Com.MyGame {
             myGenGameObjects.priestsGetOn();
         }
  
-        /**
-        * 实现IGameJudge接口
-        **/
         public void modifyBoatPriestsNum(bool isAdd) {
             if (isAdd)
                 BoatPriestsNum++;

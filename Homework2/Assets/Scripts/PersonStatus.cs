@@ -22,8 +22,6 @@ public class PersonStatus : MonoBehaviour {
 	void Update () {
 	
 	}
- 
-    //人上船（下岸）
     public void personSeatOnBoat(bool boatAtLeft, bool seatAtLeft) {
         if (seatAtLeft) {
             if (boatAtLeft)
@@ -52,7 +50,6 @@ public class PersonStatus : MonoBehaviour {
         }
     }
  
-    //人上岸（下船）
     public void landTheBank(bool boatAtLeft) {
         if (boatAtLeft) {
             this.transform.position = new Vector3(-originalPos.x, originalPos.y, originalPos.z);
