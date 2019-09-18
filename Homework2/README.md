@@ -27,7 +27,8 @@
            this.transform.position  =  Vector3.Lerp(this.transform.position, this.transform.position  +  new  Vector3(Time.deltaTime  *  x_speed, Time.deltaTime  *  y_speed, 0), 1);
            ```
        - 处理完成后，其效果图如下图所示，具体看演示视频。
-       - 
+       ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/parabola1.png)
+       ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/parabola2.png)
 - 实现一个完整的太阳系， 其他星球围绕太阳的转速必须不一样，且不在一个法平面上
   - 实现太阳系时，一开始没看清题意，采用了```GameObject.CreatePrimitive(PrimitiveType.Sphere)```方法创建星球，通过数组来分配各个星球的```position、localscale```属性，但后来发现需要对星球进行贴图，然而并不懂如何在代码中将贴图应用到对象上，因此只能老老实实的建立9个星球对象后逐个调用```Rotate、RotateAround```进行处理，代码如下：
     ```c
@@ -67,7 +68,8 @@
 }
     ```
    - 实现完成后，其图示意如下图：
-  
+   ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/solar1.png)
+   ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/solar2.png)
 2. 编程题
     - 建立```BaseCode.cs```，定义接口、坐标等基础信息，建立```mainSceneController```类，实现接口，调用方法。其中``mainSceneController``类的代码如下：
     ```c
@@ -187,6 +189,8 @@
    }
     ```
     - 处理完成后，效果图如下图，但在代码的修改上，可能触及到某些函数导致最后的结果判断出错，能力上以及时间不上令我难以寻找错误，因此只能将就，准确的代码看本文最后链接。
-    
+    ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/game1.png)
+    ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/game2.png)
     - 此题代码参考[CSDN博客](https://blog.csdn.net/qq_33000225/article/details/57086542)
-    - 此作业[演示视频](https://github.com/Simon-Hwang/Unity3d-learning/edit/master/Homework2/demonstration.mp4)
+    - 此作业[演示视频](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/demonstration.mp4)
+   
