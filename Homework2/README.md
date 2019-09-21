@@ -71,6 +71,14 @@
    ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/solar1.png)
    ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework2/images/solar2.png)
 2. 编程题
+    - **列出所有游戏对象：**
+    	- 牧师、恶魔、船、河、左岸、右岸
+    - **动作表**
+   动作 | 条件 | 运动结果
+   - | - | - 
+   牧师/恶魔上船| 船静止 && 船有空位 && 岸上牧师/恶魔数量不为0 | 牧师/恶魔上船
+   牧师/恶魔上船| 船静止 && 左/右岸有空位 && 船上牧师/恶魔数量不为0 | 牧师/恶魔下船
+   开船| 船静止 && 船上至少有一个牧师/恶魔 | 船运动到对岸
     - 建立```BaseCode.cs```，定义接口、坐标等基础信息，建立```mainSceneController```类，实现接口，调用方法。其中``mainSceneController``类的代码如下：
     ```c
    public  class  mainSceneController : System.Object, IUserActions, IGameJudge {
