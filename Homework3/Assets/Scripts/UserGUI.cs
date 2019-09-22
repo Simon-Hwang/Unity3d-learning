@@ -29,9 +29,13 @@ public class UserGUI : MonoBehaviour {
 		if (if_win_or_not == -1) {
 			GUI.Label (new Rect (Screen.width/2 - 80, 100, 100, 50), "Game Over!!!", MyStyle);
 			reStart ();
+			action.pause();
+			Director.cn_move = 1;
 		} else if (if_win_or_not == 1) {
 			GUI.Label (new Rect (Screen.width/2 - 80, 100, 100, 50), "You Win!!!", MyStyle);
 			reStart ();
+			action.pause();
+			Director.cn_move = 1;
 		}
 	}
 }

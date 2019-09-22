@@ -44,6 +44,12 @@ public class MySceneController : MonoBehaviour, SceneController, UserAction{ //�
 			team.Add (tem);
 		}
 	}
+	public void pause(){
+		boat.Mypause ();
+		foreach (MyCharacterController i in team) {
+			i.Mypause();
+		}
+	}
 	public void moveboat(){
 		if (Director.cn_move == 1)
 			return;
@@ -51,7 +57,7 @@ public class MySceneController : MonoBehaviour, SceneController, UserAction{ //�
 			return;
 		actionManager.moveBoat(boat.getGameObject(),boat.boatMove(),boat.move_speed); //将控制器交到管理器中由管理器服务
 		//check whether game over
-		user.if_win_or_not = checkGameOver();
+		user.if_win_or_not = checkGameOver(); 
 	}
 	public void isClickChar (MyCharacterController tem_char){
 		if (Director.cn_move == 1)
@@ -100,7 +106,7 @@ public class MySceneController : MonoBehaviour, SceneController, UserAction{ //�
 		}
 	}
 	private int checkGameOver(){
-		if (Director.cn_move == 1)
+		if (Director.cn_move == 1) //裁判 判断游戏是否结束
 			return 0;
 		int from_priest = 0;
 		int from_devil = 0;

@@ -57,7 +57,7 @@ namespace Com.Engine
 		}
 	}
 
- 	public class SequenceAction: SSAction, ISSActionCallback  //创建上下船的动作
+ 	public class SequenceAction: SSAction, ISSActionCallback  
 	{           
 		public List<SSAction> sequence;    
 		public int repeat = -1;           
@@ -179,7 +179,7 @@ namespace Com.Engine
 	{
 		public static int cn_move = 0;//0->move, 1->pause
 		private static Director _instance;
-		public SceneController curren{ get; set;}
+		public SceneController curren{ get; set;} //{get;set;}默认生成了SceneController curren变量
 		public static Director get_Instance(){
 			if (_instance == null)
 			{
@@ -220,6 +220,9 @@ namespace Com.Engine
 		public int getType(){
 			return Ctype;
 		}
+		public void Mypause(){
+			Director.cn_move = 1;
+		}
 		public void setName(string name){
 			character.name = name;
 		}
@@ -257,6 +260,7 @@ namespace Com.Engine
 		void moveboat();
 		void isClickChar (MyCharacterController tem_char);
 		void restart();
+		void pause();
 	}
 	//-----------CoastController---------------------
 	public class CoastController{
@@ -364,6 +368,9 @@ namespace Com.Engine
 				TFflag = 1;
 				return new Vector3 (5, 1, 0);
 			}
+		}
+		public void Mypause(){
+			Director.cn_move = 1;
 		}
 		public void getOnBoat(MyCharacterController tem_cha){
 			int index = getEmptyIndex ();
