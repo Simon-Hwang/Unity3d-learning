@@ -176,3 +176,4 @@
 - 游戏输后的结果：
  ![image](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework3/images/over.png)
  - 尝试在结束/胜利后点击事件，发现事件不发生任何动作，以此认为裁判类实现正确。
+ [演示视频](https://github.com/Simon-Hwang/Unity3d-learning/blob/master/Homework3/demontration.mp4)
